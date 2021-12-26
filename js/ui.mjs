@@ -1,4 +1,4 @@
-function uiBuilderFunc(el1, el2, el3, object) {
+function renderData(el1, el2, el3, object) {
   el1.innerHTML = `<ul>
     <li> Country :${object.sys.country}</li>
     <li>City name: ${object.name}</li>
@@ -16,4 +16,4 @@ function uiBuilderFunc(el1, el2, el3, object) {
   el3.innerHTML = `<p class="text">${object.weather[0].main}</p>`;
 }
 
-export { uiBuilderFunc as uiBuilder };
+export { renderData as renderData };

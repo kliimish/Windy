@@ -1,4 +1,4 @@
-import { uiBuilder } from "./ui.mjs";
+import { renderData } from "./ui.mjs";
 //To make it work you will need your own API key get it from https://openweathermap.org/
 const apiKey = `YOUR_API_KEY_HERE`;
 const inputField = document.querySelector(`#city`);
@@ -16,7 +16,7 @@ const getWaether = (cityName) => {
   )
     .then((r) => r.json())
     .then((data) => {
-      uiBuilder(cityNames, temp, weather, data);
+      renderData(cityNames, temp, weather, data);
     });
 };
 tabContainer.addEventListener(`click`, (e) => {
